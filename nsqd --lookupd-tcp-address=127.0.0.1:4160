@@ -1,0 +1,40 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\vinit> cd C:\nsq
+PS C:\nsq> nsqd --lookupd-tcp-address=127.0.0.1:4160
+[nsqd] 2025/05/17 23:28:45.311665 INFO: nsqd v1.3.0 (built w/go1.21.5)
+[nsqd] 2025/05/17 23:28:45.312180 INFO: ID: 1016
+[nsqd] 2025/05/17 23:28:45.313779 INFO: NSQ: persisting topic/channel metadata to nsqd.dat
+[nsqd] 2025/05/17 23:28:45.318234 INFO: TCP: listening on [::]:4150
+[nsqd] 2025/05/17 23:28:45.318234 INFO: HTTP: listening on [::]:4151
+[nsqd] 2025/05/17 23:28:45.318234 INFO: LOOKUP(127.0.0.1:4160): adding peer
+[nsqd] 2025/05/17 23:28:45.318782 INFO: LOOKUP connecting to 127.0.0.1:4160
+[nsqd] 2025/05/17 23:28:45.320979 INFO: LOOKUPD(127.0.0.1:4160): peer info {TCPPort:4160 HTTPPort:4161 Version:1.3.0 BroadcastAddress:VINIT}
+[nsqd] 2025/05/17 23:34:34.998873 INFO: TCP: new client(127.0.0.1:56926)
+[nsqd] 2025/05/17 23:34:34.999409 INFO: CLIENT(127.0.0.1:56926): desired protocol magic '  V2'
+[nsqd] 2025/05/17 23:34:35.001603 INFO: [127.0.0.1:56926] IDENTIFY: {ClientID:VINIT Hostname:VINIT HeartbeatInterval:30000 OutputBufferSize:16384 OutputBufferTimeout:250 FeatureNegotiation:true TLSv1:false Deflate:false DeflateLevel:6 Snappy:false SampleRate:0 UserAgent:pynsq/0.9.1 MsgTimeout:0}
+[nsqd] 2025/05/17 23:34:36.014367 INFO: TOPIC(my_topic): created
+[nsqd] 2025/05/17 23:34:36.014367 INFO: CI: querying nsqlookupd http://VINIT:4161/channels?topic=my_topic
+[nsqd] 2025/05/17 23:34:36.014367 INFO: NSQ: persisting topic/channel metadata to nsqd.dat
+[nsqd] 2025/05/17 23:34:36.014367 INFO: LOOKUPD(127.0.0.1:4160): topic REGISTER my_topic
+[nsqd] 2025/05/17 23:34:43.133452 INFO: TCP: new client(192.168.0.111:56929)
+[nsqd] 2025/05/17 23:34:43.138903 INFO: CLIENT(192.168.0.111:56929): desired protocol magic '  V2'
+[nsqd] 2025/05/17 23:34:43.139084 INFO: [192.168.0.111:56929] IDENTIFY: {ClientID:VINIT Hostname:VINIT HeartbeatInterval:30000 OutputBufferSize:16384 OutputBufferTimeout:250 FeatureNegotiation:true TLSv1:false Deflate:false DeflateLevel:6 Snappy:false SampleRate:0 UserAgent:pynsq/0.9.1 MsgTimeout:0}
+[nsqd] 2025/05/17 23:34:43.141213 INFO: TOPIC(my_topic): new channel(test_channel)
+[nsqd] 2025/05/17 23:34:43.141213 INFO: NSQ: persisting topic/channel metadata to nsqd.dat
+[nsqd] 2025/05/17 23:34:43.141213 INFO: LOOKUPD(127.0.0.1:4160): channel REGISTER my_topic test_channel
+[nsqd] 2025/05/17 23:42:23.680424 INFO: PROTOCOL(V2): [127.0.0.1:56926] exiting ioloop
+[nsqd] 2025/05/17 23:42:23.682062 INFO: PROTOCOL(V2): [192.168.0.111:56929] exiting ioloop
+[nsqd] 2025/05/17 23:42:23.793916 ERROR: client(192.168.0.111:56929) - failed to read command - read tcp 192.168.0.111:4150->192.168.0.111:56929: i/o timeout
+[nsqd] 2025/05/17 23:42:23.764470 ERROR: client(127.0.0.1:56926) - failed to read command - read tcp 127.0.0.1:4150->127.0.0.1:56926: i/o timeout
+[nsqd] 2025/05/17 23:42:23.764470 INFO: PROTOCOL(V2): [127.0.0.1:56926] exiting messagePump
+[nsqd] 2025/05/17 23:42:23.825267 INFO: PROTOCOL(V2): [192.168.0.111:56929] exiting messagePump
+[nsqd] 2025/05/17 23:42:24.053740 INFO: TCP: new client(192.168.0.111:56959)
+[nsqd] 2025/05/17 23:42:24.119559 INFO: CLIENT(192.168.0.111:56959): desired protocol magic '  V2'
+[nsqd] 2025/05/17 23:42:24.124225 INFO: [192.168.0.111:56959] IDENTIFY: {ClientID:VINIT Hostname:VINIT HeartbeatInterval:30000 OutputBufferSize:16384 OutputBufferTimeout:250 FeatureNegotiation:true TLSv1:false Deflate:false DeflateLevel:6 Snappy:false SampleRate:0 UserAgent:pynsq/0.9.1 MsgTimeout:0}
+[nsqd] 2025/05/17 23:42:38.995603 INFO: TCP: new client(127.0.0.1:56990)
+[nsqd] 2025/05/17 23:42:38.996154 INFO: CLIENT(127.0.0.1:56990): desired protocol magic '  V2'
+[nsqd] 2025/05/17 23:42:38.996281 INFO: [127.0.0.1:56990] IDENTIFY: {ClientID:VINIT Hostname:VINIT HeartbeatInterval:30000 OutputBufferSize:16384 OutputBufferTimeout:250 FeatureNegotiation:true TLSv1:false Deflate:false DeflateLevel:6 Snappy:false SampleRate:0 UserAgent:pynsq/0.9.1 MsgTimeout:0}
